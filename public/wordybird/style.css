@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --card-bg: #FFFDF6;
+  --ink: #1D2A3D;
+  --ink-soft: #5C6979;
+  --accent-yellow: #F5B82E;
+  --accent-amber: #EE7B33;
+  --brand-blue: #2C6BB8;
+  --brand-blue-dark: #1F5BA3;
+  --rule: #EDDFB8;
+  --shadow: 0 18px 48px rgba(20, 54, 90, 0.18), 0 4px 12px rgba(20, 54, 90, 0.08);
+  --max-width: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, #C9E8F7 0%, #A6D6EE 40%, rgba(166, 214, 238, 0) 70%),
+    linear-gradient(180deg, #A6D6EE 0%, #BDDDF0 35%, #C4E0B8 70%, #ABD085 100%);
+  background-attachment: fixed;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Hero block (sky scene + owl logo) */
+.hero {
+  background-image: url('./wordybird_background.png');
+  background-size: cover;
+  background-position: center 32%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 28px 22px 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.hero.landing { padding: 28px 22px 8px; }
+.hero.landing img { max-width: 460px; }
+
+.hero.sub { padding: 22px 22px 18px; }
+.hero.sub img { max-width: 320px; }
+
+@media (max-width: 600px) {
+  .hero.landing img { max-width: 340px; }
+  .hero.sub img { max-width: 240px; }
+  .hero { padding-top: 22px; padding-bottom: 18px; }
+}
+
+/* Content body inside the card */
+.content {
+  padding: 30px 40px 40px;
+}
+
+@media (max-width: 600px) {
+  .content { padding: 22px 22px 32px; }
+  .page { padding: 16px 12px 48px; }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--accent-amber);
+  letter-spacing: 0.01em;
+  margin-bottom: 6px;
+}
+
+h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(30px, 4.6vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+}
+
+.meta {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+}
+
+header.intro {
+  margin-bottom: 32px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--rule);
+}
+
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  margin: 38px 0 12px;
+}
+
+h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 19px;
+  margin: 22px 0 8px;
+}
+
+p { margin: 0 0 18px; }
+
+ul {
+  margin: 0 0 18px;
+  padding-left: 22px;
+}
+
+ul li { margin-bottom: 8px; }
+ul li::marker { color: var(--brand-blue); }
+
+strong { font-weight: 600; color: var(--ink); }
+
+a {
+  color: var(--brand-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.12s ease, text-decoration-color 0.12s ease;
+}
+
+a:hover {
+  color: var(--accent-amber);
+  text-decoration-color: var(--accent-amber);
+}
+
+footer {
+  margin-top: 52px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: var(--ink-soft);
+  text-decoration-color: var(--rule);
+}
+
+footer a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--accent-yellow);
+}
+
+/* FAQ cards (support page) */
+.faq {
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin-bottom: 10px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.faq:hover {
+  border-color: var(--accent-yellow);
+}
+
+.faq h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.faq p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+
+/* Landing page lede */
+.lede {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 4px 0 28px;
+  text-align: center;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 12px 0 36px;
+  justify-content: center;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border: 2px solid var(--brand-blue);
+  background: white;
+  color: var(--brand-blue);
+  transition: transform 0.15s ease, background-color 0.12s, color 0.12s;
+}
+
+.cta:hover {
+  background: rgba(44, 107, 184, 0.08);
+  transform: translateY(-1px);
+  color: var(--brand-blue-dark);
+  text-decoration-color: transparent;
+}
+
+.cta.primary {
+  background: var(--brand-blue);
+  color: white;
+  border-color: var(--brand-blue);
+}
+
+.cta.primary:hover {
+  background: var(--brand-blue-dark);
+  color: white;
+}
+
+/* Screenshots gallery on the landing page */
+.shots-section {
+  margin: 24px 0 16px;
+}
+
+.shots-scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -40px;
+  padding: 12px 40px 18px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+}
+
+.shots-scroller::-webkit-scrollbar {
+  height: 8px;
+}
+.shots-scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+.shots-scroller::-webkit-scrollbar-thumb {
+  background: var(--rule);
+  border-radius: 4px;
+}
+.shots-scroller::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-yellow);
+}
+
+.shots-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+}
+
+.shots-track img {
+  display: block;
+  height: 460px;
+  width: auto;
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(20, 54, 90, 0.15);
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.shots-track img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(20, 54, 90, 0.22);
+}
+
+@media (max-width: 600px) {
+  .shots-scroller {
+    margin: 0 -22px;
+    padding: 12px 22px 16px;
+  }
+  .shots-track img {
+    height: 380px;
+    border-radius: 18px;
+  }
+}
