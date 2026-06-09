@@ -28,8 +28,8 @@ html, body {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(ellipse 80% 55% at 50% 0%, #FFECD6 0%, #FFB98A 40%, rgba(255,185,138,0) 70%),
-    linear-gradient(180deg, #FFB98A 0%, #EC806E 30%, #C84D78 65%, #7A3A8C 100%);
+    radial-gradient(ellipse 80% 55% at 50% 0%, #FFE8E2 0%, #F5A898 40%, rgba(245,168,152,0) 70%),
+    linear-gradient(180deg, #F5A898 0%, #D96558 30%, #B83C3A 65%, #6E1E1C 100%);
   background-attachment: fixed;
 }
 
@@ -48,15 +48,16 @@ body {
 
 /* Hero */
 .hero {
-  padding: 40px 32px 32px;
+  padding: 48px 32px 36px;
   text-align: center;
+  background: #FFFFFF;
   border-bottom: 1px solid var(--rule);
 }
 
 .hero img {
   display: block;
-  margin: 0 auto 20px;
-  width: 120px;
+  margin: 0 auto 24px;
+  width: 200px;
   height: auto;
 }
 
@@ -77,8 +78,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  .hero { padding: 28px 22px 24px; }
-  .hero img { width: 96px; }
+  .hero { padding: 32px 22px 28px; }
+  .hero img { width: 160px; }
 }
 
 /* Content body */
