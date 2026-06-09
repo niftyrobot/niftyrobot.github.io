@@ -1,96 +1,52 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nifty Robot Studios</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nifty Robot Studios</title>
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Theme (matches your logo color) -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: '#d85a54' // matches your logo red
-          }
-        }
-      }
-    }
-  </script>
+  <meta name="description" content="Nifty Robot Studios — modern app development and software solutions." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
+  <main class="page">
+    <article class="card">
 
-<body class="bg-gray-50 text-gray-800">
+      <div class="hero">
+        <img src="logo.png" alt="Nifty Robot Studios logo" />
+        <h1>Nifty Robot Studios</h1>
+        <p>Modern app development and software solutions</p>
+      </div>
 
-  <!-- HERO -->
-  <header class="bg-white shadow-sm">
-    <div class="max-w-4xl mx-auto px-6 py-16 text-center">
-      
-      <!-- LOGO -->
-      <img src="logo.png" alt="Nifty Robot Studios" class="mx-auto w-48 mb-6">
+      <div class="content">
 
-      <h1 class="text-4xl font-bold text-brand">
-        Nifty Robot Studios
-      </h1>
+        <h2>Our Apps</h2>
 
-      <p class="mt-4 text-lg text-gray-600">
-        Modern app development and software solutions
-      </p>
-    </div>
-  </header>
+        <a href="/wordybird/" class="app-card">
+          <img src="/wordybird/wbirdy_trans_swoop.png" alt="Wordy Bird" />
+          <div class="app-card-body">
+            <strong>Wordy Bird</strong>
+            <p>A friendly word puzzle for your phone. Swipe to connect letters, build words, and beat your high score.</p>
+          </div>
+          <span class="app-card-arrow">&rarr;</span>
+        </a>
 
-  <!-- SERVICES -->
-  <section class="max-w-4xl mx-auto px-6 py-16 text-center">
-    <h2 class="text-2xl font-semibold mb-4">What We Do</h2>
+        <h2>What We Do</h2>
+        <p>We build clean, scalable applications&mdash;from mobile apps to modern web platforms. Whether you&rsquo;re launching a new idea or modernizing existing systems, we deliver reliable, high-quality software.</p>
 
-    <p class="text-gray-600 leading-relaxed">
-      We build clean, scalable applications—from mobile apps to modern web platforms.
-      Whether you're launching a new idea or modernizing existing systems, we deliver
-      reliable, high-quality software solutions.
-    </p>
-  </section>
+        <h2>Contact</h2>
+        <p>Have a project or idea? Let&rsquo;s talk: <a href="mailto:contact@niftyrobot.org">contact@niftyrobot.org</a></p>
 
-  <!-- CONTACT -->
-  <section class="bg-white border-t">
-    <div class="max-w-4xl mx-auto px-6 py-16 text-center">
-      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+        <footer>
+          <span>&copy; <span id="year"></span> Nifty Robot Studios</span>
+        </footer>
 
-      <p class="text-gray-600 mb-6">
-        Have a project or idea? Let’s talk.
-      </p>
-
-      <a
-        href="mailto:niftyrobotstudios@gmail.com"
-        class="inline-block bg-brand hover:opacity-90 text-white px-6 py-3 rounded-lg transition"
-      >
-        niftyrobotstudios@gmail.com
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="text-center text-sm text-gray-500 py-6">
-    © <span id="year"></span> Nifty Robot Studios
-  </footer>
+      </div>
+    </article>
+  </main>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>

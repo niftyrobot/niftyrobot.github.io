@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --card-bg: #FFFCF8;
+  --ink: #2A1515;
+  --ink-soft: #6B5555;
+  --accent: #D85A54;
+  --accent-dark: #BF4540;
+  --accent-warm: #E8894A;
+  --rule: #F0DDD8;
+  --shadow: 0 18px 48px rgba(90, 20, 20, 0.16), 0 4px 12px rgba(90, 20, 20, 0.07);
+  --max-width: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%, #FFECD6 0%, #FFB98A 40%, rgba(255,185,138,0) 70%),
+    linear-gradient(180deg, #FFB98A 0%, #EC806E 30%, #C84D78 65%, #7A3A8C 100%);
+  background-attachment: fixed;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Hero */
+.hero {
+  padding: 40px 32px 32px;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero img {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px;
+  height: auto;
+}
+
+.hero h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 17px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 28px 22px 24px; }
+  .hero img { width: 96px; }
+}
+
+/* Content body */
+.content {
+  padding: 30px 40px 40px;
+}
+
+@media (max-width: 600px) {
+  .content { padding: 22px 22px 32px; }
+  .page { padding: 16px 12px 48px; }
+}
+
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  margin: 36px 0 14px;
+  color: var(--ink);
+}
+
+p { margin: 0 0 18px; }
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(216, 90, 84, 0.35);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.12s ease, text-decoration-color 0.12s ease;
+}
+
+a:hover {
+  color: var(--accent-dark);
+  text-decoration-color: var(--accent-warm);
+}
+
+strong { font-weight: 600; color: var(--ink); }
+
+/* App card */
+.app-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: white;
+  border: 1.5px solid var(--rule);
+  border-radius: 16px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  margin-bottom: 10px;
+}
+
+.app-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(216, 90, 84, 0.12);
+  color: inherit;
+  text-decoration: none;
+  text-decoration-color: transparent;
+}
+
+.app-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.app-card-body {
+  flex: 1;
+}
+
+.app-card-body strong {
+  display: block;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.app-card-body p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.app-card-arrow {
+  font-size: 20px;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.app-card:hover .app-card-arrow {
+  transform: translateX(3px);
+}
+
+/* Footer */
+footer {
+  margin-top: 52px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: var(--ink-soft);
+  text-decoration-color: var(--rule);
+}
+
+footer a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--accent-warm);
+}
