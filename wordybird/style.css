@@ -49,7 +49,7 @@ body {
 
 /* Hero block (sky scene + owl logo) */
 .hero {
-  background-image: url('./wordybird_background.png');
+  background-image: url('./assets/wordybird_background.png');
   background-size: cover;
   background-position: center 32%;
   background-repeat: no-repeat;
