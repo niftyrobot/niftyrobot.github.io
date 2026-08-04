@@ -259,6 +259,13 @@ footer a:hover {
   color: white;
 }
 
+.cta.disabled {
+  border-color: var(--rule);
+  color: var(--ink-soft);
+  background: transparent;
+  cursor: default;
+}
+
 /* Screenshots gallery on the landing page */
 .shots-section {
   margin: 24px 0 16px;
