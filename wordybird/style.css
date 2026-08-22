@@ -276,6 +276,21 @@ footer a {
   cursor: default;
 }
 
+.badge-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 12px 0 36px;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge-row img {
+  height: 54px;
+  width: auto;
+  display: block;
+}
+
 /* Screenshots gallery on the landing page */
 .shots-section {
   margin: 24px 0 16px;
